@@ -9,7 +9,7 @@ factorial n = product [1..n]
 average ns = sum ns `div` length ns
 
 -- Programming in Haskell
--- Exercises chapter 2
+-- Chapter 2
 
 -- 2
 {-
@@ -29,3 +29,7 @@ last' xs = xs !! (length xs - 1)
 last'' xs = head (reverse xs)
 
 -- 5
+init' xs = reverse (tail (reverse xs))
+init'' xs = take (length xs - 1) xs
+
+-- Chapter 10
