@@ -1,13 +1,3 @@
--- Learn You a Haskell
-doubleMe x = x + x
-doubleUs x y = x * 2 + y * 2
-doubleSmallNumber x = if x > 100
-  then x
-  else x * 2
-doubleSmallNumber' x = (if x > 100 then x else x * 2) + 1
-factorial n = product [1..n]
-average ns = sum ns `div` length ns
-
 -- Programming in Haskell
 -- Chapter 2
 
@@ -22,14 +12,16 @@ average ns = sum ns `div` length ns
 n = a `div` length xs
   where
     a = 10
-    xs = [1,2,3,4,5]
+    xs = [1, 2, 3, 4, 5]
 
 -- 4
 last' xs = xs !! (length xs - 1)
+
 last'' xs = head (reverse xs)
 
 -- 5
 init' xs = reverse (tail (reverse xs))
+
 init'' xs = take (length xs - 1) xs
 
 -- Chapter 10

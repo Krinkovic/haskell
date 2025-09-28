@@ -1,4 +1,11 @@
--- Calcualate a proportional baking dish of a different shape.
+{-
+ [ ] Calcualate a proportional baking dish of a different shape.
+ [ ] inch conversion
+ [ ] Result in litres
+ [ ] Show similar we own
+ [ ] A list of currently owned dishes
+-}
+
 
 roundVolume :: Float -> Float -> Float
 roundVolume diameter depth = (diameter / 2) ^ 2 * pi * depth
@@ -12,7 +19,7 @@ squareVolume w h d = w * h * d
 -- diameter = r * 2
 -- rv = r ^ 2 * pi
 
-squareToRound = 
+squareToRound =
 main = do
   putStrLn "Select option:"
   putStrLn "1. Round to Rectangular"
@@ -32,4 +39,3 @@ main = do
   -- Round to square
   -- let [diameter, depth] = words input
   -- let volume = roundVolume (read diameter) (read depth)
-  
