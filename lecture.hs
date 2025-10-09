@@ -1,19 +1,7 @@
-fyrdubbel x = y + y
-  where
-    y = x + x
+factors :: Int -> [Int]
+factors x = [n | n <- [1 .. x], x `mod` n == 0]
 
-main :: IO ()
-main = interact $ unlines . map io . lines
+prime x = factors x == [1, x]
 
--- io :: String -> String
--- io x = x
-
--- io :: String -> String
--- io x
---   | x == "0" = "Zero"
---   | x == "35" = "Awesome"
---   | otherwise = "Too bad"
-
-io line = show (x ^ 10)
-  where
-    x = read line
+primes :: Int -> [Int]
+primes x = [n | n <- [2 .. x], prime n]
