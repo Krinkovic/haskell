@@ -1,6 +1,9 @@
 -- 2025 Kristoffer
 
-data Rectangle = Rectangle Int Int
+data Rectangle = Rectangle
+  { width :: Int,
+    height :: Int
+  }
 
 area :: Rectangle -> Int
 area (Rectangle w h) = w * h

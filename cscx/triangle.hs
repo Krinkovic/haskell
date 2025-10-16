@@ -1,6 +1,6 @@
 -- 2025 Kristoffer
 
-import Data.List
+import Data.List (sort)
 
 main :: IO ()
 main = interact $ unlines . map io . lines
