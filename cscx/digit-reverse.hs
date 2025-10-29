@@ -1,10 +1,14 @@
 -- 2025 Kristoffer
 
-digitReverse :: Int -> Int
-digitReverse n = show (n `mod` 10) ++ show $ digitReverse (n `div` 10)
+reverseDigits :: Int -> Int
+reverseDigits n = read $ helper n
+  where
+    helper x
+      | x `div` 10 == 0 = show (x `mod` 10)
+      | otherwise = show (x `mod` 10) ++ helper (x `div` 10)
 
 io :: String -> String
-io input = digitReverse n
+io input = show $ reverseDigits n
   where
     n = read input
 
